@@ -5,14 +5,14 @@ Just a test markdown document for marked-example.
 
 ## HTML Code Block
 
-```html
+```
 <h1>Hamburger 1</h1>
 <h2>Hamburger 2</h2>
 ```
 
 ## HTML Example Block
 
-```html:example
+```html
 <h1>Hamburger 1</h1>
 <h2>Hamburger 2</h2>
 ```

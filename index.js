@@ -16,8 +16,7 @@ module.exports = function(options) {
 
   return function(code, lang) {
     var result = code;
-    if (lang && lang.match(/\:example$/)) {
-      var lang = lang.split(':')[0];
+    if (lang && lang.match(/^html/)) {
       var data = {
         rendered: code,
         code: highlight.highlight(lang, code).value,

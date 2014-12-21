@@ -3,9 +3,9 @@
 Code renderer for `marked` that converts HTML code blocks into examples
 with rendered HTML and highlighted code using `highlight.js`.
 
-Takes a code block:
+Takes an HTML code block:
 
-    ```html:example
+    ```html
     <h1>Example</h1>
     ```
 
