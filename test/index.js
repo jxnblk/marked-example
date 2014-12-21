@@ -4,17 +4,15 @@ var marked = require('marked');
 var highlight = require('highlight.js');
 var markedExample = require('..');
 
-markedExample.setOptions({
-  classes: {
-    container: 'border',
-    rendered: 'p2',
-    code: 'p2'
-  }
-});
-
 var options = {};
 options.renderer = new marked.Renderer();
-options.renderer.code = markedExample.code;
+options.renderer.code = markedExample({
+  classes: {
+    container: 'border rounded',
+    rendered: 'p2',
+    code: 'p2 bg-light-gray'
+  }
+});
 
 function render(filename) {
   var md = fs.readFileSync(filename, 'utf8');
