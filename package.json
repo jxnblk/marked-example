@@ -1,0 +1,15 @@
+{
+  "name": "marked-example",
+  "version": "1.0.0",
+  "description": "Convert HTML code blocks into example blocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.3.2",
+    "highlight.js": "^8.4.0"
+  }
+}
