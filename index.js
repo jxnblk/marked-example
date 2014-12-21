@@ -1,8 +1,9 @@
 
 var fs = require('fs');
+var path = require('path');
 var highlight = require('highlight.js');
 var Handlebars = require('handlebars');
-var template = Handlebars.compile(fs.readFileSync('./template/example.hbs', 'utf8'));
+var template = Handlebars.compile(fs.readFileSync(path.join(__dirname, './template/example.hbs'), 'utf8'));
 
 module.exports = function(options) {
 
@@ -12,7 +13,6 @@ module.exports = function(options) {
   options.classes.container = options.classes.container || '';
   options.classes.rendered = options.classes.rendered || '';
   options.classes.code = options.classes.code || '';
-  console.log('renderer options', options);
 
   return function(code, lang) {
     var result = code;
@@ -23,7 +23,8 @@ module.exports = function(options) {
         code: highlight.highlight(lang, code).value,
         classes: options.classes
       };
-      result = template(data);
+      var html = template(data);
+      result = new Handlebars.SafeString(html);
     } else {
       result = '<pre>' + highlight.highlightAuto(code, [lang]).value + '</pre>';
     }
