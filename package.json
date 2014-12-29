@@ -12,5 +12,16 @@
     "marked": "^0.3.2",
     "highlight.js": "^8.4.0",
     "handlebars": "^2.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnblk/marked-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jxnblk/marked-example/issues"
+  },
+  "homepage": "https://github.com/jxnblk/marked-example"
 }
