@@ -1,6 +1,6 @@
 {
   "name": "marked-example",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert HTML code blocks into example blocks",
   "main": "index.js",
   "scripts": {
