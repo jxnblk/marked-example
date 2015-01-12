@@ -14,12 +14,17 @@ module.exports = function(options) {
   options.classes.rendered = options.classes.rendered || '';
   options.classes.code = options.classes.code || '';
 
+  escapeHandlebars = function(code) {
+    return code.replace(/{{/g, '\\{{');
+  }
+
   return function(code, lang) {
     var result = code;
     if (lang && lang.match(/^html/)) {
+      var escaped = options.handlebars ? escapeHandlebars(code) : code;
       var data = {
         rendered: code,
-        code: highlight.highlight(lang, code).value,
+        code: highlight.highlight(lang, escaped).value,
         classes: options.classes
       };
       var html = template(data);

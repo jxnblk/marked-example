@@ -17,6 +17,7 @@ options.renderer.code = markedExample({
 function render(filename) {
   var md = fs.readFileSync(filename, 'utf8');
   var html = marked(md, options);
+  console.log(html);
   fs.writeFileSync(filename.replace('.md', '.html'), html);
 }
 
